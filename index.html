@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Padronização de documentos · Fleming Ensino Médio</title>
+  <meta name="description" content="Padronize provas, listas, atividades e documentos escolares automaticamente, sem alterar o conteúdo.">
+  <meta name="theme-color" content="#0f3a2c">
+  <link rel="icon" href="img/icone.svg" type="image/svg+xml">
+  <link rel="preload" href="fontes/red-hat-display-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/" aria-label="Padronização de documentos — início">
+        <img src="img/logo-verde.png" alt="Fleming Ensino Médio" width="147" height="42">
+        <span class="brand-legenda">
+          <span class="brand-name">Portal de Padronização</span>
+          <span class="brand-tag">Porto Alegre</span>
+        </span>
+      </a>
+      <nav class="mainnav" aria-label="Navegação principal">
+        <a href="#/" data-nav="formatar">Formatar documento</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo" tabindex="-1"></main>
+  <footer class="rodape">
+    <div class="rodape-inner">
+      <div class="rodape-grade">
+        <div class="rodape-marca">
+          <a class="rodape-logo" href="#/" aria-label="Portal de Padronização — início">
+            <img src="img/logo-branco.png" alt="Fleming Ensino Médio" width="147" height="42">
+            <span class="rodape-legenda"><span class="rodape-portal">Portal de Padronização</span><span class="rodape-unidade">Porto Alegre</span></span>
+          </a>
+        </div>
+        <div class="rodape-contato">
+          <h3>Contato</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16M16 9h2a2 2 0 0 1 2 2v10M2 21h20M8 7h4M8 11h4M8 15h4M10 21v-3h0"/></svg>Rua Ramiro Barcellos, 1260</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+555181227306">+55 51 8122-7306</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:secretariaempoa@flemingeducacao.com.br">secretariaempoa@flemingeducacao.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape-base">
+        <span>© <span id="ano">2026</span> Colégio Fleming · Porto Alegre</span>
+        <span class="rodape-destaque">Os documentos não saem do seu computador</span>
+        <span>Desenvolvido por Thiago Wolke</span>
+      </div>
+    </div>
+  </footer>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

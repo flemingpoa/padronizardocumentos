@@ -1,0 +1,17 @@
+{
+ "wheel": "python_docx-1.2.0-py3-none-any.whl",
+ "arquivos": [
+  "navegador.py",
+  "app/__init__.py",
+  "app/analyzer.py",
+  "app/default_templates.py",
+  "app/docxutil.py",
+  "app/errors.py",
+  "app/formatter.py",
+  "app/integrity.py",
+  "app/perfis.py",
+  "app/render_html.py",
+  "app/assets/logo-fleming.png",
+  "app/assets/logo-fleming-branco.png"
+ ]
+}
