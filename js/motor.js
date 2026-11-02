@@ -28,11 +28,13 @@ export function carregarMotor(aoMudar = () => {}) {
     const micropip = py.pyimport('micropip');
     await micropip.install.callKwargs(`${base}${lista.wheel}`, { deps: false });
     aoMudar('Carregando as regras do Fleming…');
-    for (const arq of lista.arquivos) {
-      const resp = await fetch(`${base}${arq}`, { cache: 'no-cache' });
-      if (!resp.ok) throw new Error(`Arquivo do motor não encontrado: ${arq}`);
+    // cada item é [nome publicado no site, nome dentro do motor] — no site nenhum arquivo começa
+    // com "_", porque o GitHub Pages esconde esses arquivos
+    for (const [origem, nome] of lista.arquivos) {
+      const resp = await fetch(`${base}${origem}`, { cache: 'no-cache' });
+      if (!resp.ok) throw new Error(`Arquivo do motor não encontrado: ${origem}`);
       const dados = new Uint8Array(await resp.arrayBuffer());
-      const destino = `/home/pyodide/${arq}`;
+      const destino = `/home/pyodide/${nome}`;
       py.FS.mkdirTree(destino.substring(0, destino.lastIndexOf('/')));
       py.FS.writeFile(destino, dados);
     }
